@@ -5,13 +5,19 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.it18zhang.ssm.domain.User" alias="_User"/>
-        <typeAlias type="com.it18zhang.ssm.domain.Order" alias="_Order"/>
-        <typeAlias type="com.it18zhang.ssm.domain.Item" alias="_Item"/>
+        <!--<typeAlias type="com.it18zhang.ssm.domain.Order" alias="_Order"/>-->
+        <!--<typeAlias type="com.it18zhang.ssm.domain.Item" alias="_Item"/>-->
+        <typeAlias type="com.it18zhang.ssm.domain.Activity" alias="_Activity"/>
+        <typeAlias type="com.it18zhang.ssm.domain.Job" alias="_Job"/>
+        <typeAlias type="com.it18zhang.ssm.domain.AlgoModel" alias="_AlgoModel"/>
     </typeAliases>
     <!-- 引入映射文件 -->
     <mappers>
         <mapper resource="UserMapper.xml"/>
-        <mapper resource="OrderMapper.xml"/>
-        <mapper resource="ItemMapper.xml"/>
+        <!--<mapper resource="OrderMapper.xml"/>-->
+        <!--<mapper resource="ItemMapper.xml"/>-->
+        <mapper resource="ActivityMapper.xml"/>
+        <mapper resource="JobMapper.xml"/>
+        <mapper resource="AlgoModelMapper.xml"/>
     </mappers>
 </configuration>

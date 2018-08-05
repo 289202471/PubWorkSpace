@@ -4,12 +4,12 @@ import java.util.List;
 
 /**
  * User
+ * @author zong
  */
 public class User {
-    private Integer id ;
-    private String name ;
-    private int age ;
-    private  String password;
+    private Integer id ;//用户id，数据库主键
+    private  String account;//用户账户名
+    private  String password;//用户密码
 
     public String getPassword() {
         return password;
@@ -17,16 +17,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    private List<Order> orders ;
-
-    public List<Order> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
     }
 
     public Integer getId() {
@@ -37,19 +27,4 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }

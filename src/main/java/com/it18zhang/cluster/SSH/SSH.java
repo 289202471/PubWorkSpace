@@ -26,7 +26,7 @@ public class SSH {
 
     public SSH(){
         jsch=new JSch();
-        this.hostIP="192.168.56.100";
+        this.hostIP="192.168.56.101";
         this.hostName="ubuntu";
         this.passWord="1234";
         this.port=22;

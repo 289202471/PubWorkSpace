@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="activities">
+    <!--#代表传递的对象#age代表传递的对象的age属性-->
+    <insert id="insert">
+        insert into activity(activityName,jobID,num,algoName,state) values(#{activityName},#{jobID},#{num},#{algoNum},#{state})
+    </insert>
+    <!--从#号指向的对象中取出id找到这个id对应的那一条数据，将那一条数据的age和name更新成用户输入的对象的name和age-->
+    <update id="update">
+        update activity set activityName = #{actvivtyName} , jobID = #{jobID} ,num=#{num},algoNum=#{algoNum},atate=#{state}where id = #{activityID}
+    </update>
+    <delete id="delete" parameterType="int">
+        delete from activity where id = #{activityID}
+    </delete>
+
+    <!-- selectOne -->
+    <!--查询语句有两个参数需要指定，一个是传入参数类型，另一个是返回参数类型,这两个类型可以像下面这样定义，也可以直接就定义为一个自己写的类-->
+    <select id="selectOne" parameterType="int" resultMap="com.it18zhang.ssm.domain.Activity">
+        select * from activity where id = #{id}
+    </select>
+<!--这个结果映射可以直接在数据库中查询出相关的数据，是一个查询优化的过程，由于第一个版本要求有点紧，所以在下一个版本在加入这个东西-->
+    <!--<resultMap id="RM_User" type="_User">-->
+        <!--<id property="id" column="uid" />-->
+        <!--<result property="name" column="uname" />-->
+        <!--<result property="age" column="uage" />-->
+        <!--&lt;!&ndash; 映射一对多关联关系 &ndash;&gt;-->
+        <!--<collection property="orders" ofType="_Order">-->
+            <!--<id property="id" column="oid" />-->
+            <!--<result property="orderNo" column="oorderno" />-->
+        <!--</collection>-->
+    <!--</resultMap>-->
+
+    <!-- selectAll -->
+    <select id="selectAll" resultMap="com.it18zhang.ssm.domain.Activity">
+        select * from activity
+    </select>
+
+
+</mapper>

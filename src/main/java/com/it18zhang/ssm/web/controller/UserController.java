@@ -50,6 +50,7 @@ public class UserController {
 
         //偏移量
         int offset = (pn - 1) * recordPerPage ;
+
         List<User> list = us.selectPage(offset, recordPerPage);
         m.addAttribute("allUsers", list);
         m.addAttribute("pages",pages) ;

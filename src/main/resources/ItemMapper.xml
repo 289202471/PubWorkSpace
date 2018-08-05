@@ -21,6 +21,7 @@
             left outer join users u on o.uid = u.id
         where i.id = #{id}
     </select>
+
     <resultMap id="RM_Item" type="_Item">
         <id property="id" column="iid" />
         <result property="itemName" column="iitemname"/>

@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  */
-@Repository()
+@Repository("userDao")
 public class UserDaoImpl extends SqlSessionDaoSupport implements BaseDao<User> {
 
     public void insert(User user) {
